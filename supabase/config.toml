@@ -1,0 +1,10 @@
+# Supabase CLI configuration (minimal)
+
+project_id = "your-project-ref"
+
+[db]
+port = 54322
+shadow_port = 54320
+major_version = 15
+
+

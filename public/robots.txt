@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Important pages
+Allow: /auth/signin
+Allow: /auth/signup
+Allow: /events
+Allow: /entertainment
+Allow: /campus-events
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /_next/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://rkade.in/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
