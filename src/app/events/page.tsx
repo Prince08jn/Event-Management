@@ -164,7 +164,7 @@ export default function EventsIndexPage() {
 
   return (
     <div className={`min-h-dvh bg-gray-50 ${inter.className}`}>
-      {isDesktop ? <DesktopNavbar logoText="rkade" /> : <Navbar />}
+      {isDesktop ? <DesktopNavbar logoText="EventoraX" /> : <Navbar />}
 
       <main className={`max-w-6xl mx-auto py-8 px-4 ${isDesktop ? 'pt-28' : 'pb-24'}`}>
         <h1 className="text-2xl font-bold mb-6">Browse Events</h1>

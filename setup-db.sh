@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Database setup script for rkade
-echo "Setting up database for rkade..."
+# Database setup script for EventoraX
+echo "Setting up database for EventoraX..."
 
 # Check if Supabase CLI is installed
 if ! command -v supabase &> /dev/null; then

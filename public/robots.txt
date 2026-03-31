@@ -16,7 +16,7 @@ Disallow: /_next/
 Disallow: /private/
 
 # Sitemap
-Sitemap: https://rkade.in/sitemap.xml
+Sitemap: https://eventorax.in/sitemap.xml
 
 # Crawl delay
 Crawl-delay: 1

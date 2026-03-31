@@ -1,4 +1,4 @@
-# rkade - Fully Modularized Web App
+# EventoraX - Fully Modularized Web App
 
 A modern, fully modularized web application built with Next.js 15, featuring complete authentication system with email/password and OAuth support, PostgreSQL/Supabase database integration, and a comprehensive user schema.
 

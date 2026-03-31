@@ -159,7 +159,7 @@ export default function CampusEventComponent({ slug, campus: propCampus, event: 
                     key,
                     amount: orderData.order.amount,
                     currency: orderData.order.currency,
-                    name: event?.name || 'rkade',
+                    name: event?.name || 'EventoraX',
                     description: `${qty} ticket(s)`,
                     order_id: orderData.order.id,
                     prefill: {
@@ -274,7 +274,7 @@ export default function CampusEventComponent({ slug, campus: propCampus, event: 
                 </div>
 
                 {/* Desktop Header */}
-                <DesktopNavbar logoText="rkade" />
+                <DesktopNavbar logoText="EventoraX" />
 
                 {/* Desktop Main Content */}
                 <div className="max-w-7xl mx-auto px-8 py-24 relative z-10">

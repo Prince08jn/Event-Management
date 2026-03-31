@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 
 export async function GET() {
-  const baseUrl = 'https://rkade.in'
+  const baseUrl = 'https://eventorax.in'
   const currentDate = new Date().toISOString()
   
   // Generate sitemap XML

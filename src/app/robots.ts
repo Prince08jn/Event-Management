@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/', '/dashboard/', '/_next/', '/private/'],
       },
     ],
-    sitemap: 'https://rkade.in/sitemap.xml',
-    host: 'https://rkade.in',
+    sitemap: 'https://eventorax.in/sitemap.xml',
+    host: 'https://eventorax.in',
   }
 }

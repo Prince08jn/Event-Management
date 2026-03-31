@@ -13,15 +13,15 @@ interface SEOProps {
 }
 
 export function SEOHead({
-  title = 'rkade - Campus Events & Entertainment Platform',
-  description = 'Discover and join campus events, entertainment activities, and connect with your university community on rkade.',
+  title = 'EventoraX - Campus Events & Entertainment Platform',
+  description = 'Discover and join campus events, entertainment activities, and connect with your university community on EventoraX.',
   keywords = ['campus events', 'university entertainment', 'student activities'],
   ogImage = '/og-image.png',
   canonicalUrl,
   structuredData
 }: SEOProps) {
   const pathname = usePathname();
-  const fullUrl = `https://rkade.in${pathname}`;
+  const fullUrl = `https://eventorax.in${pathname}`;
   const canonical = canonicalUrl || fullUrl;
 
   return (
@@ -30,7 +30,7 @@ export function SEOHead({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content="rkade Team" />
+      <meta name="author" content="EventoraX Team" />
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
@@ -42,8 +42,8 @@ export function SEOHead({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={fullUrl} />
-      <meta property="og:site_name" content="rkade" />
-      <meta property="og:image" content={`https://rkade.in${ogImage}`} />
+      <meta property="og:site_name" content="EventoraX" />
+      <meta property="og:image" content={`https://eventorax.in${ogImage}`} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={title} />
@@ -53,13 +53,13 @@ export function SEOHead({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`https://rkade.in${ogImage}`} />
+      <meta name="twitter:image" content={`https://eventorax.in${ogImage}`} />
       <meta name="twitter:image:alt" content={title} />
       
       {/* Additional Meta Tags */}
       <meta name="theme-color" content="#000000" />
       <meta name="msapplication-TileColor" content="#000000" />
-      <meta name="application-name" content="rkade" />
+      <meta name="application-name" content="EventoraX" />
       
       {/* Structured Data */}
       {structuredData && (

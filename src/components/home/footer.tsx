@@ -14,7 +14,7 @@ export default function Footer() {
               <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
                 <span className="text-black font-bold text-sm">r</span>
               </div>
-              <span className="text-lg font-bold tracking-tight">rkade</span>
+              <span className="text-lg font-bold tracking-tight">EventoraX</span>
               <span className="text-[9px] font-semibold bg-white/20 text-white px-1.5 py-0.5 rounded-full uppercase tracking-widest">Beta</span>
             </div>
             <p className="text-sm text-zinc-400 leading-relaxed max-w-xs">
@@ -45,7 +45,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-zinc-500">© {new Date().getFullYear()} rkade &amp; Co. All rights reserved.</p>
+          <p className="text-sm text-zinc-500">© {new Date().getFullYear()} EventoraX &amp; Co. All rights reserved.</p>
           <div className="flex items-center gap-3">
             {/* Instagram */}
             <a href="#" aria-label="Instagram" className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">

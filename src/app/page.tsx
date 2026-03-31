@@ -136,7 +136,7 @@ export default function Home() {
               <span className="text-white font-bold text-lg">r</span>
             </div>
             <span className="text-xl font-bold tracking-tight text-white transition-all duration-300 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-violet-400 group-hover:to-blue-400"
-            >rkade</span>
+            >EventoraX</span>
           </Link>
 
           {/* Desktop nav links */}
@@ -379,7 +379,7 @@ export default function Home() {
                 <div className="w-3 h-3 rounded-full bg-yellow-400" />
                 <div className="w-3 h-3 rounded-full bg-green-400" />
                 <div className="ml-4 flex-1 bg-white rounded-md px-3 py-1 text-xs text-zinc-400 border border-zinc-200">
-                  rkade.in/home
+                  eventorax.in/home
                 </div>
               </div>
 

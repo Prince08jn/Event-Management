@@ -13,10 +13,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "rkade - Campus Events & Entertainment Platform",
-    template: "%s | rkade"
+    default: "EventoraX - Campus Events & Entertainment Platform",
+    template: "%s | EventoraX"
   },
-  description: "Discover and join campus events, entertainment activities, and connect with your university community on rkade. The ultimate platform for student engagement and campus life.",
+  description: "Discover and join campus events, entertainment activities, and connect with your university community on EventoraX. The ultimate platform for student engagement and campus life.",
   keywords: [
     "campus events",
     "university entertainment",
@@ -27,35 +27,35 @@ export const metadata: Metadata = {
     "student community",
     "university platform"
   ],
-  authors: [{ name: "rkade Team" }],
-  creator: "rkade",
-  publisher: "rkade",
+  authors: [{ name: "EventoraX Team" }],
+  creator: "EventoraX",
+  publisher: "EventoraX",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://rkade.in'),
+  metadataBase: new URL('https://eventorax.in'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://rkade.in',
-    title: 'rkade - Campus Events & Entertainment Platform',
-    description: 'Discover and join campus events, entertainment activities, and connect with your university community on rkade.',
-    siteName: 'rkade',
+    url: 'https://eventorax.in',
+    title: 'EventoraX - Campus Events & Entertainment Platform',
+    description: 'Discover and join campus events, entertainment activities, and connect with your university community on EventoraX.',
+    siteName: 'EventoraX',
     images: [{
       url: '/og-image.png',
       width: 1200,
       height: 630,
-      alt: 'rkade - Campus Events Platform',
+      alt: 'EventoraX - Campus Events Platform',
     }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'rkade - Campus Events & Entertainment Platform',
+    title: 'EventoraX - Campus Events & Entertainment Platform',
     description: 'Discover and join campus events, entertainment activities, and connect with your university community.',
     images: ['/og-image.png'],
   },
@@ -96,18 +96,18 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
-              name: 'rkade',
+              name: 'EventoraX',
               description: 'Campus Events & Entertainment Platform',
-              url: 'https://rkade.in',
+              url: 'https://eventorax.in',
               potentialAction: {
                 '@type': 'SearchAction',
-                target: 'https://rkade.in/search?q={search_term_string}',
+                target: 'https://eventorax.in/search?q={search_term_string}',
                 'query-input': 'required name=search_term_string'
               },
               sameAs: [
-                'https://twitter.com/rkade',
-                'https://facebook.com/rkade',
-                'https://instagram.com/rkade'
+                'https://twitter.com/eventorax',
+                'https://facebook.com/eventorax',
+                'https://instagram.com/eventorax'
               ]
             })
           }}

@@ -15,40 +15,53 @@ export default function Profile() {
   const router = useRouter();
   const isDesktop = useDesktop();
   const user = session?.user;
-  const [registeredEvents, setRegisteredEvents] = useState<Array<{ id: number; name: string; category: string; price: string; image: string }>>([]);
+  const [registeredEvents, setRegisteredEvents] = useState<Array<{ id: string; name: string; category: string; price: string; image: string }>>([]);
   const [publishedEvents, setPublishedEvents] = useState<Array<{ id: string; name: string; category?: string; price?: string; img?: string }>>([]);
+  const [loadingEvents, setLoadingEvents] = useState(true);
 
-  // Mock data for demonstration - replace with actual data fetching
+  // Fetch real registered events from Supabase
   useEffect(() => {
-    // Simulate registered events
-    setRegisteredEvents([
-      {
-        id: 1,
-        name: "Event name",
-        category: "Campus",
-        price: "₹1099",
-        image: "/brand1.svg"
-      },
-      {
-        id: 2,
-        name: "Event name",
-        category: "Events",
-        price: "₹1099",
-        image: "/brand2.svg"
+    const fetchRegisteredEvents = async () => {
+      if (!session?.user?.email) {
+        setLoadingEvents(false);
+        return;
       }
-    ]);
+      try {
+        setLoadingEvents(true);
+        const res = await fetch('/api/bookings/user');
+        if (res.ok) {
+          const bookings = await res.json();
+          if (Array.isArray(bookings) && bookings.length > 0) {
+            const mapped = bookings.map((b: { id: string; event?: { id?: string; event_name?: string; category?: string; price?: string; portrait_poster?: string; landscape_poster?: string } }) => ({
+              id: b.id,
+              name: b.event?.event_name || 'Event',
+              category: b.event?.category || 'Event',
+              price: b.event?.price ? `₹${b.event.price}` : 'Free',
+              image: b.event?.portrait_poster || b.event?.landscape_poster || '/placeholder.svg'
+            }));
+            setRegisteredEvents(mapped);
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching registered events:', error);
+      }
 
-    // Simulate published events (user-created events)
-    try {
-      const stored = localStorage.getItem('localEvents');
-      if (stored) {
-        const localEvents = JSON.parse(stored);
-        setPublishedEvents(localEvents.slice(0, 4)); // Show max 4 events
+      // Also load locally published events
+      try {
+        const stored = localStorage.getItem('localEvents');
+        if (stored) {
+          const localEvents = JSON.parse(stored);
+          setPublishedEvents(localEvents.slice(0, 4));
+        }
+      } catch (e) {
+        console.error('Error loading published events:', e);
       }
-    } catch (e) {
-      console.error('Error loading published events:', e);
-    }
-  }, []);
+
+      setLoadingEvents(false);
+    };
+
+    fetchRegisteredEvents();
+  }, [session?.user?.email]);
 
   // Handle authentication redirect
   useEffect(() => {
@@ -74,7 +87,7 @@ export default function Profile() {
   if (isDesktop) {
     return (
       <div className="min-h-screen bg-gray-50">
-        <DesktopNavbar logoText="Profile" />
+        <DesktopNavbar logoText="EventoraX" />
 
         <div className="pt-[76px]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -146,7 +159,12 @@ export default function Profile() {
                     </Button>
                   </div>
 
-                  {registeredEvents.length > 0 ? (
+                  {loadingEvents ? (
+                    <div className="flex justify-center items-center py-12">
+                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
+                      <span className="ml-3 text-sm text-gray-500">Loading events...</span>
+                    </div>
+                  ) : registeredEvents.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {registeredEvents.map((event) => (
                         <div key={event.id} className="border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-shadow">

@@ -21,7 +21,7 @@ const NAV_LINKS = [
   { label: 'Past Events', href: '/past-events' },
 ] as const;
 
-export default function DesktopNavbar({ onSearch, logoText = "rkade", className = "" }: NavbarProps) {
+export default function DesktopNavbar({ onSearch, logoText = "EventoraX", className = "" }: NavbarProps) {
   const { data: session } = useSession();
   const pathname = usePathname();
   const [showSearchBar, setShowSearchBar] = React.useState(false);
@@ -89,7 +89,7 @@ export default function DesktopNavbar({ onSearch, logoText = "rkade", className 
             className="text-[15px] font-bold tracking-tight text-white group-hover:text-transparent group-hover:bg-clip-text transition-all duration-300"
             style={{ backgroundImage: 'linear-gradient(90deg,#a78bfa,#60a5fa)', WebkitBackgroundClip: 'text' }}
           >
-            rkade
+            EventoraX
           </span>
         </Link>
 

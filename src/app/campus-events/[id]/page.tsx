@@ -124,7 +124,7 @@ export default function CampusEventPage({ params }: PageProps) {
 				</div>
 
 				{/* Desktop Header */}
-				<DesktopNavbar logoText="rkade" />
+				<DesktopNavbar logoText="EventoraX" />
 
 				{/* Desktop Main Content */}
 				<div className="max-w-7xl mx-auto px-8 py-24 relative z-10">

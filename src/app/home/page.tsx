@@ -182,7 +182,7 @@ export default function HomePage() {
   if (isDesktop) {
     return (
       <div className={`min-h-screen bg-gray-50 ${inter.className}`}>
-        <DesktopNavbar logoText="rkade" />
+        <DesktopNavbar logoText="EventoraX" />
         <DesktopMainLayout events={eventsWithHref} showArtistNearYou={false} />
       </div>
     )

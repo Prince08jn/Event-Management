@@ -3,9 +3,9 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Sign Up',
-  description: 'Join rkade today! Create your account to discover campus events, entertainment activities, and connect with your university community.',
+  description: 'Join EventoraX today! Create your account to discover campus events, entertainment activities, and connect with your university community.',
   openGraph: {
-    title: 'Join rkade - Campus Events Platform',
+    title: 'Join EventoraX - Campus Events Platform',
     description: 'Create your account to access campus events and entertainment activities.',
   },
 };

@@ -23,7 +23,7 @@ export default async function AdminLayout({
       <aside className="w-64 bg-[#0f172a] text-white shadow-2xl overflow-y-auto border-r border-gray-800">
         <div className="p-6">
           <h1 className="text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 tracking-tight">
-            rkade
+            EventoraX
           </h1>
           <p className="text-gray-400 text-xs font-medium tracking-wider uppercase mt-1">Super Admin</p>
         </div>

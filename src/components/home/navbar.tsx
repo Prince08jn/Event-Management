@@ -11,7 +11,7 @@ interface NavbarProps {
   className?: string;
 }
 
-export default function Navbar({ onSearch, logoText = "rkade", className = "" }: NavbarProps) {
+export default function Navbar({ onSearch, logoText = "EventoraX", className = "" }: NavbarProps) {
   const { data: session } = useSession();
   const [showCityDropdown, setShowCityDropdown] = useState(false);
   const [selectedCity, setSelectedCity] = useState(session?.user?.current_city || "");
@@ -96,7 +96,7 @@ export default function Navbar({ onSearch, logoText = "rkade", className = "" }:
           </div>
           <span className="text-[15px] font-bold tracking-tight text-white group-hover:text-transparent group-hover:bg-clip-text transition-all duration-300"
             style={{ backgroundImage: 'linear-gradient(90deg,#a78bfa,#60a5fa)', WebkitBackgroundClip: 'text' }}
-          >rkade</span>
+          >EventoraX</span>
         </Link>
 
         <div
